@@ -23,8 +23,16 @@
 
       const admitted = document.querySelector(".admitted");
       const refused = document.querySelector(".refused");
-      admmitted.textContent = "Admit: ";
+      admitted.textContent = "Admit: ";
       refused.textContent = "Refused: ";
+
+      for (const person of people) {
+        if (person === "Phil" || person === "Lola") {
+          refused.textContent += `${person}, `;
+        } else {
+          admitted.textContent += `${person}, `;
+        }
+      }
     </script>
   </body>
 </html>
